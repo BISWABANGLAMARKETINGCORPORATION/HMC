@@ -1,0 +1,48 @@
+<html>
+<script src="jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+
+		$("#btn1").click(function(){
+  			var x = $("#tb1").val();
+  			var y = $("#tb2").val();
+  			var z = $("#tb3").val();
+  			var result=0;
+  			
+
+  			if  (x>z && x>y)
+  				result = x + " is the highest number";
+  			else if (y>z && y>x)
+  				result = y + " is the highest number";
+  			else 
+  				result = z + " is the highest number";
+
+  			$("#lbl1").text(result);
+
+		});
+	});
+	
+</script>
+<body>
+<h2>Highest Number Calculator</h2>
+<br/>
+<p>
+Enter First Number
+</p>	
+<input type="number" id="tb1"></input>
+<p>
+Enter Secound  Number
+</p>	
+<input type="number" id="tb2"></input>
+<p>
+Enter Third Number
+</p>	
+<input type="number" id="tb3"></input>
+</br>
+</br>
+<button id="btn1">Find Highest Number</button>
+<br/>
+<br/>
+<label id="lbl1"></label>
+</body>
+</html>
